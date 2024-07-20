@@ -1,0 +1,74 @@
+<div class="flex items-center justify-center h-full">
+  <button mat-flat-button (click)="openDialog()">Add Workout</button>
+</div>
+
+<ng-template #dialogTemplate>
+  <form
+    class="min-w-[150px] max-w-[500px] w-full border-2 p-8 rounded bg-white"
+    #form="ngForm"
+    (ngSubmit)="onSubmit(form)">
+    <h6 mat-dialog-title>Add Workout Details</h6>
+
+    <mat-form-field class="w-full">
+      <mat-label>User Name</mat-label>
+      <input matInput [(ngModel)]="name" name="name" required />
+      <mat-icon matSuffix>person</mat-icon>
+      <div
+        *ngIf="form.submitted && form.controls['name']?.invalid"
+        class="text-xs">
+        User Name is required
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Workout Type</mat-label>
+      <mat-select [(ngModel)]="workoutType" name="workoutType" required>
+        <mat-option
+          *ngFor="let option of workoutOptions"
+          [value]="option.value">
+          {{ option.viewValue }}
+        </mat-option>
+      </mat-select>
+      <mat-icon matSuffix>fitness_center</mat-icon>
+      <div
+        *ngIf="form.submitted && form.controls['workoutType']?.invalid"
+        class="text-xs">
+        Workout Type is required
+      </div>
+    </mat-form-field>
+
+    <mat-form-field class="w-full">
+      <mat-label>Workout Minutes</mat-label>
+      <input
+        matInput
+        [(ngModel)]="workoutMinutes"
+        name="workoutMinutes"
+        required
+        type="number"
+        min="1" />
+      <mat-icon matSuffix>timer</mat-icon>
+      <div
+        *ngIf="form.submitted && form.controls['workoutMinutes']?.invalid"
+        class="text-xs">
+        Workout Minutes are required
+      </div>
+    </mat-form-field>
+
+    <div class="flex justify-end mt-4 gap-4">
+      <button
+        mat-raised-button
+        type="button"
+        class="cancel-button"
+        (click)="onCancel()">
+        Cancel
+      </button>
+      <button
+        mat-flat-button
+        matTooltip="Add Workout in the List"
+        type="submit">
+        <mat-icon>add_task</mat-icon>
+        Add Workout
+      </button>
+    </div>
+  </form>
+</ng-template>
