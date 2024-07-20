@@ -19,17 +19,16 @@ Health Challenge Tracker is a single-page application (SPA) developed using Angu
 - <b> Workout Progress Charts:</b> Optionally display users' workout progress using charts for better visualization.
 
 <h3> Storage</h3>
-- **LocalStorage:** User data is stored locally using `localStorage` for persistence.
+- <b>LocalStorage:</b> User data is stored locally using `localStorage` for persistence.
 
 <h3> Responsive Design </h3>
-- **Responsive UI:** The application is designed to be responsive and user-friendly, making it accessible on various devices.
+- <b>Responsive UI:</b> The application is designed to be responsive and user-friendly, making it accessible on various devices.
 
 <h3> Screenshots</h3>
 
-![](https://github.com/user-attachments/assets/29869083-7ea9-4844-88b0-73f10f2dd8de)
-![](https://github.com/user-attachments/assets/dddeac26-2263-4d43-b9c4-041ab0aa12aa)
-![](https://github.com/user-attachments/assets/a77a28a5-8679-487d-89fe-2ae4ecd7707f)
-![](https://github.com/user-attachments/assets/078f2294-bdf0-404a-ab82-c31338020f1a)
+![]
+
+
 
 
 <h3> Getting Started</h3>
